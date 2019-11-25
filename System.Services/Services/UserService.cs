@@ -16,6 +16,7 @@ using Microsoft.EntityFrameworkCore;
 using SYF.Framework;
 using SYF.Infrastructure.Entities;
 using SYF.Infrastructure.Models;
+using AutoMapper;
 
 namespace SYF.Services
 {
@@ -221,7 +222,7 @@ namespace SYF.Services
 
         private User MapToEntity(UserModel model, User entity)
         {
-            Mapper.Map(model, entity);
+            //Mapper.Map(model, entity);
 
 
             // Save the user access
