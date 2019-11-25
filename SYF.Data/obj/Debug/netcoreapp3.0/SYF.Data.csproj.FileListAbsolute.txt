@@ -1,0 +1,26 @@
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.csprojAssemblyReference.cache
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.AssemblyInfoInputs.cache
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.AssemblyInfo.cs
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Framework.dll
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Infrastructure.dll
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Framework.pdb
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.deps.json
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.dll
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.pdb
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Infrastructure.pdb
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.csproj.CopyComplete
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.dll
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.pdb
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.deps.json
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.dll
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.pdb
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Framework.dll
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Infrastructure.dll
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Infrastructure.pdb
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Framework.pdb
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.csprojAssemblyReference.cache
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.AssemblyInfoInputs.cache
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.AssemblyInfo.cs
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.csproj.CopyComplete
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.dll
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.pdb

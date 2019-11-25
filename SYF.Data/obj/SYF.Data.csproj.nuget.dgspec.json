@@ -1,0 +1,215 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj",
+        "projectName": "SYF.Data",
+        "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj",
+        "packagesPath": "C:\\Users\\SiphoKhumalo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SiphoKhumalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj",
+        "projectName": "SYF.Framework",
+        "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj",
+        "packagesPath": "C:\\Users\\SiphoKhumalo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SiphoKhumalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj",
+        "projectName": "SYF.Infrastructure",
+        "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\SiphoKhumalo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SiphoKhumalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj": {
+                "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[4.9.4, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

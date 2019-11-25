@@ -1,0 +1,11 @@
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\bin\Debug\netcoreapp2.2\SYF.Infrastructure.deps.json
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\bin\Debug\netcoreapp2.2\SYF.Infrastructure.dll
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\bin\Debug\netcoreapp2.2\SYF.Infrastructure.pdb
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\obj\Debug\netcoreapp2.2\SYF.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\obj\Debug\netcoreapp2.2\SYF.Infrastructure.AssemblyInfo.cs
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\obj\Debug\netcoreapp2.2\SYF.Infrastructure.dll
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\obj\Debug\netcoreapp2.2\SYF.Infrastructure.pdb
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\obj\Debug\netcoreapp2.2\SYF.Infrastructure.csprojAssemblyReference.cache
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\bin\Debug\netcoreapp2.2\SYF.Framework.dll
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\bin\Debug\netcoreapp2.2\SYF.Framework.pdb
+C:\Users\SiphoKhumalo\source\repos\WebApplication1\System.Infrastructure\obj\Debug\netcoreapp2.2\SYF.Infrastructure.csproj.CopyComplete
