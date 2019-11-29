@@ -22,10 +22,13 @@ namespace SYF.Services
 {
     public class UserService : BaseService, IUserService
     {
-        public UserService(ISecurityProvider securityProvider, DataContext context, IServiceProvider serviceProvider, IClaimsPrincipalProvider principalProvider, ILoggerFactory loggerFactory)
+        private readonly IMapper _mapper;
+
+        public UserService(ISecurityProvider securityProvider, DataContext context, IServiceProvider serviceProvider, IClaimsPrincipalProvider principalProvider, ILoggerFactory loggerFactory, IMapper mapper)
            : base(context, serviceProvider, principalProvider, loggerFactory)
         {
             SecurityProvider = securityProvider;
+            _mapper = mapper;
         }
 
         private ISecurityProvider SecurityProvider { get; }
@@ -220,9 +223,9 @@ namespace SYF.Services
                 .AnyAsync(x => x.Id != id && x.UserName == userName  && !x.Deleted);
         }
 
-        private User MapToEntity(UserModel model, User entity)
+        public User MapToEntity(UserModel model, User entity)
         {
-            //Mapper.Map(model, entity);
+           var t = _mapper.Map<UserModel>(entity);
 
 
             // Save the user access
