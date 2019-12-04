@@ -30,7 +30,7 @@ namespace SYF.Infrastructure
                 .ForMember(a => a.Access, b => b.Ignore());
 
             CreateMap<Person, UserModel>();
-            CreateMap<UserModel, User>();
+
         }
     }
 }

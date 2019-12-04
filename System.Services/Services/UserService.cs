@@ -202,7 +202,14 @@ namespace SYF.Services
                 Person = new Person
                 {
                     Id = model.PersonId,
-                }
+                    EmailAddress = model.EmailAddress,
+                    MobileNumber = model.MobileNumber,
+                    Name = model.Name,
+                    PhoneNumber = model.PhoneNumber,
+
+                },
+                UserName = model.UserName,
+                Flags = UserFlags.None,
             };
 
             DataContext.Users.Add(user);

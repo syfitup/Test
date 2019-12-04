@@ -38,9 +38,6 @@ namespace SYF.Infrastructure.Criteria
             if (PersonPositionId != null)
                 qry = qry.Where(x => x.Person.PersonPositionId == PersonPositionId);
 
-            if (SiteId != null)
-                qry = qry.Where(x => x.SiteId == SiteId);
-
             if (Deleted != null)
                 qry = qry.Where(x => x.Deleted == Deleted);
 

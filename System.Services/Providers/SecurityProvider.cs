@@ -43,7 +43,6 @@ namespace SYF.Services.Providers
                 Id = user.Id,
                 Name = user.Person.Name,
                 PersonId = user.PersonId,
-                SiteId = user.SiteId
                 //Roles = user.Person.
             };
 

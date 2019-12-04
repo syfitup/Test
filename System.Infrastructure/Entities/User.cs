@@ -20,7 +20,6 @@ namespace SYF.Infrastructure.Entities
         public DateTime? TokenDate { get; set; }
         public byte[] ApiKey { get; set; }
         public UserFlags Flags { get; set; }
-        public Guid SiteId { get; set; }
 
         public Person Person { get; set; }
     }
