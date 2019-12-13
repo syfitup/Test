@@ -4,6 +4,8 @@ using SYF.Infrastructure.Models;
 using SYF.Infrastructure.Models.Requests;
 using SYF.Infrastructure.Models.Responses;
 using SYF.Services;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks; 
 
 namespace WebApplication1.Controllers
@@ -17,6 +19,18 @@ namespace WebApplication1.Controllers
         }
 
         public IUserService UserService { get; }
+
+        [HttpGet("{id}")]
+        public Task<UserModel> GetByIdAsync(Guid id)
+        {
+            return UserService.GetByIdAsync(id);
+        }
+
+        [HttpGet("[action]")]
+        public Task<List<UserSummary>> SearchAsync([FromQuery]UserSearchRequest request)
+        {
+            return UserService.SearchAsync(request);
+        }
 
         [AllowAnonymous]
         [HttpPost("authenticate")]

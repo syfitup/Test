@@ -20,5 +20,6 @@ namespace SYF.Infrastructure.Models
         public DateTime? RarEndDate { get; set; }
         public Guid? SiteId { get; set; }
         public int? RarFrequency { get; set; }
+        public List<PersonAccessModel> Access { get; set; }
     }
 }

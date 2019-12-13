@@ -17,6 +17,7 @@ using SYF.Framework;
 using SYF.Infrastructure.Entities;
 using SYF.Infrastructure.Models;
 using AutoMapper;
+using AutoMapper.QueryableExtensions;
 
 namespace SYF.Services
 {
@@ -32,6 +33,49 @@ namespace SYF.Services
         }
 
         private ISecurityProvider SecurityProvider { get; }
+        public async Task<List<UserSummary>> SearchAsync(UserSearchRequest request)
+        {
+            var criteria = _mapper.Map<UserCriteria>(request);
+            criteria.Deleted = false;
+
+            return await DataContext.Users
+                .AsNoTracking()
+                .Include(x => x.Person.Department)
+                .Include(x => x.Person.SubDepartment)
+                .Include(x => x.Person.PersonPosition)
+                .Query(criteria)
+                .OrderBy(x => x.UserName)
+                .Select( x => _mapper.Map<UserSummary>(x))
+                .ToListAsync();
+        }
+        public async Task<UserModel> GetByIdAsync(Guid id)
+        {
+            var entity = await DataContext.Users
+                .AsNoTracking()
+                .Include(a => a.Person)
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            var model = _mapper.Map<UserModel>(entity);
+
+            model.Roles = await DataContext.PersonRoles
+                .AsNoTracking()
+                .Include(a => a.Role)
+                .Where(x => x.PersonId == model.PersonId && !x.Deleted)
+                .ProjectTo<PersonRoleModel>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+
+            model.Access = await DataContext.PersonAccess
+                .AsNoTracking()
+                .Include(a => a.Department)
+                .Include(a => a.SubDepartment)
+                .Where(x => x.PersonId == model.PersonId && !x.Deleted)
+                .ProjectTo<PersonAccessModel>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+
+
+            return model;
+        }
+
         public async Task<AuthenticateResponse> AuthenticateAsync(AuthenticateRequest request)
         {
             var criteria = new UserCriteria { UserName = request.Email, Deleted = false };
@@ -236,45 +280,45 @@ namespace SYF.Services
 
 
             // Save the user access
-            //foreach (var accessModel in model.Access)
-            //{
-            //    PersonAccess accessObj = null;
-            //    if (accessModel.Id != Guid.Empty)
-            //        accessObj = entity.Person.Access.FirstOrDefault(x => x.Id == accessModel.Id);
+            foreach (var accessModel in model.Access)
+            {
+                PersonAccess accessObj = null;
+                if (accessModel.Id != Guid.Empty)
+                    accessObj = entity.Person.Access.FirstOrDefault(x => x.Id == accessModel.Id);
 
-            //    if (accessObj == null)
-            //    {
-            //        accessObj = new PersonAccess()
-            //        {
-            //            Id = SequentialGuid.NewGuid(),
-            //            PersonId = entity.PersonId,
-            //        };
-            //        entity.Person.Access.Add(accessObj);
-            //    }
+                if (accessObj == null)
+                {
+                    accessObj = new PersonAccess()
+                    {
+                        Id = SequentialGuid.NewGuid(),
+                        PersonId = entity.PersonId,
+                    };
+                    entity.Person.Access.Add(accessObj);
+                }
 
-            //    //Mapper.Map(accessModel, accessObj);
-            //}
+                //Mapper.Map(accessModel, accessObj);
+            }
 
             //// Save the roles
-            //foreach (var roleModel in model.Roles)
-            //{
-            //    PersonRole roleObj = null;
-            //    if (roleModel.Id != Guid.Empty)
-            //        roleObj = entity.Person.Roles.FirstOrDefault(x => x.Id == roleModel.Id);
+            foreach (var roleModel in model.Roles)
+            {
+                PersonRole roleObj = null;
+                if (roleModel.Id != Guid.Empty)
+                    roleObj = entity.Person.Roles.FirstOrDefault(x => x.Id == roleModel.Id);
 
-            //    if (roleObj == null)
-            //    {
-            //        roleObj = new PersonRole
-            //        {
-            //            Id = SequentialGuid.NewGuid(),
-            //            PersonId = entity.PersonId
-            //        };
-            //        entity.Person.Roles.Add(roleObj);
-            //    }
+                if (roleObj == null)
+                {
+                    roleObj = new PersonRole
+                    {
+                        Id = SequentialGuid.NewGuid(),
+                        PersonId = entity.PersonId
+                    };
+                    entity.Person.Roles.Add(roleObj);
+                }
 
-            //    roleObj.RoleId = roleModel.RoleId;
-            //    roleObj.Deleted = roleModel.Deleted;
-            //}
+                roleObj.RoleId = roleModel.RoleId;
+                roleObj.Deleted = roleModel.Deleted;
+            }
 
             return entity;
         }

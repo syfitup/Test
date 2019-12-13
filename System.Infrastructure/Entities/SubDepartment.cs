@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SYF.Infrastructure.Entities
 {
-    [Table("Departments", Schema = "dbo")]
+    [Table("SubDepartments", Schema = "dbo")]
     public class SubDepartment : Entity<Guid>
     {
         public string Code { get; set; }

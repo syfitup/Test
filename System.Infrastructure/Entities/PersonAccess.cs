@@ -16,3 +16,4 @@ namespace SYF.Infrastructure.Entities
         public SubDepartment SubDepartment { get; set; }
     }
 }
+
