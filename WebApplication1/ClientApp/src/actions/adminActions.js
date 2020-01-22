@@ -2,7 +2,13 @@
 const initialState = { users: [], isLoading: false };
 
 export const actionCreators = {
-    getUsers: () => async (dispatch) => {
+    getUsers: startDateIndex => async (dispatch, getState) => {
+
+        if (!getState().adminActions.users) {
+            // Don't issue a duplicate request (we already have or are loading the requested data)
+            var a = 0;
+            return;
+        }
 
         dispatch({ type: GET_USERS });
 

@@ -22,7 +22,7 @@ namespace SYF.Infrastructure
             CreateMap<PersonModel, Person>();
 
             CreateMap<User, UserModel>()
-           .ForMember(a => a.EmailAddress, op => op.MapFrom(src => src.Person.EmailAddress.Trim()));
+             .ForMember(a => a.EmailAddress, op => op.MapFrom(src => src.Person.EmailAddress.Trim()));
 
             CreateMap<UserModel, User>()
                 .ForMember(a => a.Person, b => b.MapFrom(c => c));

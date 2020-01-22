@@ -19,8 +19,11 @@ namespace SYF.Data
         public DbSet<User> Users { get; set; }
         public DbSet<PersonAccess> PersonAccess { get; set; }
         public DbSet<PersonRole> PersonRoles { get; set; }
-       
-        
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<SubDepartment> SubDepartments { get; set; }
+
+
+
     }
 
     public class TransientDataContext : DataContext

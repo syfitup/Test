@@ -38,7 +38,7 @@ namespace SYF.Services
             var criteria = _mapper.Map<UserCriteria>(request);
             criteria.Deleted = false;
 
-            return await DataContext.Users
+            var t  = await DataContext.Users
                 .AsNoTracking()
                 .Include(x => x.Person.Department)
                 .Include(x => x.Person.SubDepartment)
@@ -47,6 +47,9 @@ namespace SYF.Services
                 .OrderBy(x => x.UserName)
                 .Select( x => _mapper.Map<UserSummary>(x))
                 .ToListAsync();
+
+            return t;
+
         }
         public async Task<UserModel> GetByIdAsync(Guid id)
         {
@@ -250,7 +253,9 @@ namespace SYF.Services
                     MobileNumber = model.MobileNumber,
                     Name = model.Name,
                     PhoneNumber = model.PhoneNumber,
-
+                    DepartmentId = model.DepartmentId,
+                    SubDepartmentId = model.SubDepartmentId,
+                    PersonPositionId = model.PersonPositionId
                 },
                 UserName = model.UserName,
                 Flags = UserFlags.None,

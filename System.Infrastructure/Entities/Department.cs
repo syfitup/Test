@@ -12,7 +12,7 @@ namespace SYF.Infrastructure.Entities
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public IList<SubDepartment> Departments { get; set; } = new List<SubDepartment>();
+        public IList<SubDepartment> SubDepartments { get; set; } = new List<SubDepartment>();
 
     }
 }

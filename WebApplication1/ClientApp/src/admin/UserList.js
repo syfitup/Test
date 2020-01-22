@@ -36,19 +36,25 @@ function renderForecastsTable(props) {
         <table className='table table-striped'>
             <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Sub Department</th>
+                    <th>Email Address</th>
+                    <th>Group</th>
+                    <th>Position</th>
                 </tr>
             </thead>
             <tbody>
                 {props.users.map(user =>
-                    <tr key={user.userName}>
+                    <tr key={user.id}>
+                        <td>{user.userName}</td>
                         <td>{user.name}</td>
                         <td>{user.departmentName}</td>
                         <td>{user.subDepartmentName}</td>
                         <td>{user.emailAddress}</td>
+                        <td>{user.groupName}</td>
+                        <td>{user.personPositionName}</td>
                     </tr>
                 )}
             </tbody>

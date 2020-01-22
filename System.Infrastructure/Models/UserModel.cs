@@ -22,6 +22,8 @@ namespace SYF.Infrastructure.Models
         public string MobileNumber { get; set; }
         public Guid? DepartmentId { get; set; }
         public Guid? SubDepartmentId { get; set; }
+        public Guid? PersonPositionId { get; set; }
+
         public bool Disabled { get; set; }
 
         public List<PersonRoleModel> Roles { get; set; }
