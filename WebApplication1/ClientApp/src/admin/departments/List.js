@@ -2,9 +2,9 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { actionCreators } from '../actions/adminActions';
+import { actionCreators } from '../../actions/adminDepartmentActions';
 
-class UserList extends Component {
+class DepartmentList extends Component {
     componentDidMount() {
         // This method is called when the component is first added to the document
         this.ensureDataFetched();
@@ -16,13 +16,13 @@ class UserList extends Component {
     }
 
     ensureDataFetched() {
-        this.props.getUsers();
+        this.props.getDepartments();
     }
 
     render() {
         return (
             <div>
-                <h1>Weather forecast</h1>
+                <h1>Departments Information</h1>
                 <p>This component demonstrates fetching data from the server and working with URL parameters.</p>
                 {renderForecastsTable(this.props)}
                 {renderPagination(this.props)}
@@ -74,6 +74,6 @@ function renderPagination(props) {
 }
 
 export default connect(
-    state => state.adminActions,
+    state => state.adminDepartmentActions,
     dispatch => bindActionCreators(actionCreators, dispatch)
-)(UserList);
+)(DepartmentList);

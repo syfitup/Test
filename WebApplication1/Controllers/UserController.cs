@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks; 
 
-namespace WebApplication1.Controllers
+namespace SYF.Web.Controllers
 {
     [Route("api/[controller]")]
     public class UserController : Controller

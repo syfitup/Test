@@ -13,8 +13,10 @@ using SYF.Data;
 using SYF.Infrastructure;
 using SYF.Infrastructure.Configuration;
 using SYF.Infrastructure.Providers;
+using SYF.Infrastructure.Services;
 using SYF.Services;
 using SYF.Services.Providers;
+using SYF.Services.Service;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -55,6 +57,8 @@ namespace WebApplication1
             services.AddSingleton<IClaimsPrincipalProvider, ClaimsPrincipalProvider>();
 
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IDepartmentService, DepartmentService>();
+            services.AddTransient<ISubDepartmentService, SubDepartmentService>();
             services.AddTransient<ISecurityProvider, SecurityProvider>();
             services.AddTransient<IClaimsPrincipalProvider, ClaimsPrincipalProvider>();
 

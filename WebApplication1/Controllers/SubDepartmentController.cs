@@ -10,9 +10,9 @@ using SYF.Infrastructure.Services;
 namespace SYF.Web.Controllers
 {
     [Route("api/[controller]")]
-    public class SubDepartmentsController : Controller
+    public class SubDepartmentController : Controller
     {
-        public SubDepartmentsController(ISubDepartmentService subDepartmentService)
+        public SubDepartmentController(ISubDepartmentService subDepartmentService)
         {
             SubDepartmentService = subDepartmentService;
         }
