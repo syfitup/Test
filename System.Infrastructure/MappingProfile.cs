@@ -6,6 +6,7 @@ using SYF.Infrastructure.Criteria;
 using SYF.Infrastructure.Entities;
 using SYF.Infrastructure.Enums;
 using SYF.Infrastructure.Models;
+using SYF.Infrastructure.Models.Requests;
 
 namespace SYF.Infrastructure
 {
@@ -44,7 +45,13 @@ namespace SYF.Infrastructure
             .ForMember(a => a.LockedOut, op => op.MapFrom(src => src.Flags.HasFlag(UserFlags.Locked)))
             .ForMember(a => a.Disabled, op => op.MapFrom(src => src.Flags.HasFlag(UserFlags.Disabled)));
 
-            CreateMap<PersonAccess, PersonAccessModel>();
+            CreateMap<DepartmentSearchRequest, DepartmentCriteria>();
+            CreateMap<Department, DepartmentModel>();
+            CreateMap<DepartmentModel, Department>();
+            CreateMap<SubDepartment, SubDepartmentModel>();
+            CreateMap<SubDepartmentModel, SubDepartment>();
+
+
         }
     }
 

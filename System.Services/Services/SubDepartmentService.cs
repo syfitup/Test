@@ -33,7 +33,7 @@ namespace SYF.Services.Service
         {
             var model = await DataContext.SubDepartments
                 .AsNoTracking()
-                .Include(x => x.Departments)
+                .Include(x => x.Department)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             return _mapper.Map<SubDepartmentModel>(model);
@@ -46,7 +46,7 @@ namespace SYF.Services.Service
 
             return await DataContext.SubDepartments
                 .AsNoTracking()
-                .Include(x => x.Departments)
+                .Include(x => x.Department)
                 .Query(criteria)
                 .OrderBy(x => x.Name)
                 .Select(x => _mapper.Map<SubDepartmentModel>(x))

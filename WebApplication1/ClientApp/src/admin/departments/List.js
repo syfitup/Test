@@ -10,11 +10,6 @@ class DepartmentList extends Component {
         this.ensureDataFetched();
     }
 
-    componentDidUpdate() {
-        // This method is called when the route parameters change
-        this.ensureDataFetched();
-    }
-
     ensureDataFetched() {
         this.props.getDepartments();
     }
