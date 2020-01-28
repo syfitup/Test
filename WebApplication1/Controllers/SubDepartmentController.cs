@@ -25,7 +25,7 @@ namespace SYF.Web.Controllers
             return SubDepartmentService.GetByIdAsync(id);
         }
 
-        [HttpGet]
+        [HttpGet("[action]")]
         public Task<IEnumerable<SubDepartmentModel>> SearchAsync([FromQuery]SubDepartmentSearchRequest request)
         {
             return SubDepartmentService.SearchAsync(request);

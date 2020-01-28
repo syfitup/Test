@@ -13,3 +13,4 @@ C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.AssemblyInfo.cs
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.dll
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.pdb
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.csprojAssemblyReference.cache

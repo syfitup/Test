@@ -46,6 +46,7 @@ namespace SYF.Infrastructure
             .ForMember(a => a.Disabled, op => op.MapFrom(src => src.Flags.HasFlag(UserFlags.Disabled)));
 
             CreateMap<DepartmentSearchRequest, DepartmentCriteria>();
+            CreateMap<SubDepartmentSearchRequest, SubDepartmentCriteria>();
             CreateMap<Department, DepartmentModel>();
             CreateMap<DepartmentModel, Department>();
             CreateMap<SubDepartment, SubDepartmentModel>();

@@ -5,6 +5,7 @@ import * as Counter from './Counter';
 import * as WeatherForecasts from './WeatherForecasts';
 import * as AdminActions from '../actions/adminActions';
 import * as AdminDepartmentActions from '../actions/adminDepartmentActions';
+import * as AdminSubDepartmentActions from '../actions/adminSubDepartmentActions';
 
 
 export default function configureStore (history, initialState) {
@@ -12,7 +13,8 @@ export default function configureStore (history, initialState) {
     counter: Counter.reducer,
       weatherForecasts: WeatherForecasts.reducer,
       adminActions: AdminActions.reducer,
-      adminDepartmentActions: AdminDepartmentActions.reducer
+      adminDepartmentActions: AdminDepartmentActions.reducer,
+      adminSubDepartmentActions: AdminSubDepartmentActions.reducer
   };
 
   const middleware = [

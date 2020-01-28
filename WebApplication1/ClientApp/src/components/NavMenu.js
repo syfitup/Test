@@ -44,6 +44,9 @@ export default class NavMenu extends React.Component {
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/department-list">All Departments</NavLink>
                                 </NavItem>
+                                <NavItem>
+                                    <NavLink tag={Link} className="text-dark" to="/subdepartment-list">All Sub Departments</NavLink>
+                                </NavItem>
                             </ul>
                         </Collapse>
                     </Container>

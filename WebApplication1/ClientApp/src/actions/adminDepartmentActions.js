@@ -1,5 +1,5 @@
 ﻿import { GET_DEPARTMENTS, RECEIVE_DEPARTMENTS } from './types';
-const initialState = { users: [], isLoading: false };
+const initialState = { departments: [], isLoading: false };
 
 export const actionCreators = {
     getDepartments: () => async (dispatch, getState) => {
@@ -28,7 +28,7 @@ export const reducer = (state, action) => {
     if (action.type === RECEIVE_DEPARTMENTS) {
         return {
             ...state,
-            users: action.departments,
+            departments: action.departments,
             isLoading: false
         };
     }
