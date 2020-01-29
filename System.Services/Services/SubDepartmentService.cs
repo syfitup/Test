@@ -55,12 +55,12 @@ namespace SYF.Services.Service
 
         public async Task<CreateResponse> CreateAsync(SubDepartmentModel model)
         {
-            var entity = new Department
+            var entity = new SubDepartment
             {
                 Id = SequentialGuid.NewGuid()
             };
 
-            DataContext.Departments.Add(entity);
+            DataContext.SubDepartments.Add(entity);
 
             _mapper.Map(model, entity);
 

@@ -8,6 +8,7 @@ import Register from './account/Register';
 import UserList from './admin/UserList';
 import DepartmentList from './admin/departments/List';
 import SubDepartmentList from './admin/subDepartments/List';
+import EditSubDepartmentList from './admin/subDepartments/Edit';
 
 export default () => (
     <Layout>
@@ -19,5 +20,6 @@ export default () => (
         <Route path='/user-list/:startDateIndex?' component={UserList} />
         <Route path='/department-list' component={DepartmentList} />
         <Route path='/subdepartment-list' component={SubDepartmentList} />
+        <Route path='/subdepartment' component={EditSubDepartmentList} />
     </Layout>
 );

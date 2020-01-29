@@ -19,6 +19,7 @@ class SubDepartmentList extends Component {
             <div>
                 <h1>Sub Departments Information</h1>
                 {renderSubDepartmentsTable(this.props)}
+                <Link to="/subdepartment" className="btn btn-primary">Sign up</Link>
             </div>
         );
     }
@@ -44,6 +45,7 @@ function renderSubDepartmentsTable(props) {
                 )}
             </tbody>
         </table>
+
     );
 }
 

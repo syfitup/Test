@@ -32,6 +32,7 @@ namespace SYF.Web.Controllers
         }
 
         [HttpPost]
+        [HttpPost("register")]
         public Task<CreateResponse> CreateAsync([FromBody] SubDepartmentModel model)
         {
             return SubDepartmentService.CreateAsync(model);
