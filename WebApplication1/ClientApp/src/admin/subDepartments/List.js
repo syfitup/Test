@@ -18,6 +18,10 @@ class SubDepartmentList extends Component {
         this.props.deleteSubDepartment(id);
     }
 
+    onEditClick(id) {
+        this.props.getSubDepartment(id);
+    }
+
     render() {
         return (
             <div>
@@ -41,6 +45,8 @@ class SubDepartmentList extends Component {
                 <tbody>
                     {props.subdepartments.map(subdepartment =>
                         <tr key={subdepartment.id}>
+                            {<button onClick={() => this.onEditClick(subdepartment.id)}>Edit</button>}
+                            <Link to={{ pathname: "/subdepartment", subdepartment: { id: subdepartment.id, newRecord: "" } }}> Press Me</Link>
                             <td>{subdepartment.name}</td>
                             <td>{subdepartment.departmentName}</td>
                             <td>{subdepartment.description}</td>
@@ -54,8 +60,6 @@ class SubDepartmentList extends Component {
         );
     }
 }
-
-
 
 export default connect(
     state => state.adminSubDepartmentActions,

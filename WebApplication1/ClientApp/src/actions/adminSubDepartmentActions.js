@@ -1,4 +1,4 @@
-﻿import { GET_SUB_DEPARTMENTS, RECEIVE_SUB_DEPARTMENTS, ADD_SUB_DEPARTMENT, RESPONSE_STATUS, DELETE_SUB_DEPARTMENT } from './types';
+﻿import { GET_SUB_DEPARTMENTS, RECEIVE_SUB_DEPARTMENTS, ADD_SUB_DEPARTMENT, RESPONSE_STATUS, DELETE_SUB_DEPARTMENT, GET_SUB_DEPARTMENT } from './types';
 const initialState = { subdepartments: [], isLoading: false, responsestatus: "" };
 
 
@@ -54,6 +54,24 @@ export const actionCreators = {
         const responsestatus = await response.json();
 
         dispatch({ type: RESPONSE_STATUS, responsestatus });
+    },
+
+    getSubDepartment: id => async (dispatch, getState) => {
+        dispatch({ type: GET_SUB_DEPARTMENT });
+        const url = `/api/subdepartments/${id}`;
+
+        let options = {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            }
+        };
+
+        const response = await fetch(url, options);
+        const subdepartment = await response.json();
+
+        dispatch({ type: GET_SUB_DEPARTMENT, subdepartment });
     }
 };
 
@@ -86,6 +104,14 @@ export const reducer = (state, action) => {
         return {
             ...state,
             responsestatus: action.responsestatus,
+            isLoading: false
+        };
+    }
+
+    if (action.type === GET_SUB_DEPARTMENT) {
+        return {
+            ...state,
+            subdepartment: action.subdepartment,
             isLoading: false
         };
     }

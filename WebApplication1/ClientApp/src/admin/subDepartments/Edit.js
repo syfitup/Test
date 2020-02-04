@@ -7,8 +7,8 @@ import { bindActionCreators } from 'redux';
 
 
 class SubDepartmentEdit extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             name: '',
             code: '',
@@ -23,11 +23,34 @@ class SubDepartmentEdit extends Component {
     }
 
     componentDidMount() {
+
+        if (this.props) {
+            this.fetch(this.props.location.subdepartment.id, this.props.location.subdepartment.newRecord);
+        }
     }
 
     UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
             this.setState({ errors: nextProps.errors });
+        }
+    }
+
+    fetch(id, newRecord) {
+        if (newRecord === "true") {
+            this.setState({
+                subdepartment: {
+                    name: '',
+                    code: '',
+                    description: '',
+                    departmentId: '',
+                    disabled: '',
+                    errors: {}
+                }
+            });
+        } else {
+            this.props.getSubDepartment(id).then(response => {
+                this.setState({ subdepartment: response });
+            });
         }
     }
 
@@ -63,7 +86,7 @@ class SubDepartmentEdit extends Component {
             { label: 'Supply Chain', value: '88E7C550-8FB4-E711-B0AE-28F10E00516D' }
         ];
 
-        const { errors } = this.state;
+        const { errors, subdepartment } = this.state;
 
         return (
             <div className="register">
@@ -117,7 +140,8 @@ class SubDepartmentEdit extends Component {
     }
 }
 
+
 export default connect(
-    state => state.weatherForecasts,
+    state => state.adminSubDepartmentActions,
     dispatch => bindActionCreators(actionCreators, dispatch)
 )(SubDepartmentEdit);
