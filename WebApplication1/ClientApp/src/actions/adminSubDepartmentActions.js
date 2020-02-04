@@ -1,5 +1,5 @@
-﻿import { GET_SUB_DEPARTMENTS, RECEIVE_SUB_DEPARTMENTS, ADD_SUB_DEPARTMENT, RESPONSE_STATUS } from './types';
-const initialState = { subdepartments: [], isLoading: false, createstatus: "" };
+﻿import { GET_SUB_DEPARTMENTS, RECEIVE_SUB_DEPARTMENTS, ADD_SUB_DEPARTMENT, RESPONSE_STATUS, DELETE_SUB_DEPARTMENT } from './types';
+const initialState = { subdepartments: [], isLoading: false, responsestatus: "" };
 
 
 export const actionCreators = {
@@ -7,7 +7,7 @@ export const actionCreators = {
 
         dispatch({ type: GET_SUB_DEPARTMENTS });
 
-        const url = `/api/subdepartment/Search`;
+        const url = `/api/subdepartments`;
         const response = await fetch(url);
         const subdepartments = await response.json();
 
@@ -16,7 +16,7 @@ export const actionCreators = {
 
     createSubDepartments: newSubDepartment => async (dispatch, getState) => {
         dispatch({ type: ADD_SUB_DEPARTMENT });
-        const url = `/api/subdepartment/register`;
+        const url = `/api/subdepartments/register`;
 
         let options = {
             method: "POST",
@@ -33,9 +33,27 @@ export const actionCreators = {
         };
 
         const response = await fetch(url, options);
-        const createStatus = await response.json();
+        const responsestatus = await response.json();
 
-        dispatch({ type: RESPONSE_STATUS, createStatus });
+        dispatch({ type: RESPONSE_STATUS, responsestatus });
+    },
+
+    deleteSubDepartment: id => async (dispatch, getState) => {
+        dispatch({ type: DELETE_SUB_DEPARTMENT });
+        const url = `/api/subdepartments/${id}`;
+
+        let options = {
+            method: "DELETE",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            }
+        };
+
+        const response = await fetch(url, options);
+        const responsestatus = await response.json();
+
+        dispatch({ type: RESPONSE_STATUS, responsestatus });
     }
 };
 
@@ -67,7 +85,7 @@ export const reducer = (state, action) => {
     if (action.type === RESPONSE_STATUS) {
         return {
             ...state,
-            createstatus: action.createstatus,
+            responsestatus: action.responsestatus,
             isLoading: false
         };
     }

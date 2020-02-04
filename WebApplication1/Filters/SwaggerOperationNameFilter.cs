@@ -10,13 +10,13 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace WebApplication1.Filters
 {
-    public class SwaggerOperationNameFilter : IOperationFilter
-    {
-        public void Apply(Operation operation, OperationFilterContext context)
-        {
-            operation.OperationId = (context.ApiDescription.ActionDescriptor as ControllerActionDescriptor)?.ControllerName + "_" + ((Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor)context.ApiDescription.ActionDescriptor).ActionName.Replace("Async", string.Empty);
-        }
-    }
+    //public class SwaggerOperationNameFilter : IOperationFilter
+    //{
+    //    public void Apply(Operation operation, OperationFilterContext context)
+    //    {
+    //        operation.OperationId = (context.ApiDescription.ActionDescriptor as ControllerActionDescriptor)?.ControllerName + "_" + ((Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor)context.ApiDescription.ActionDescriptor).ActionName.Replace("Async", string.Empty);
+    //    }
+    //}
 
 
 }

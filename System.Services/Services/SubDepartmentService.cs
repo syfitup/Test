@@ -80,7 +80,7 @@ namespace SYF.Services.Service
 
         public async Task DeleteAsync(Guid id)
         {
-            var entity = await DataContext.Departments.FindAsync(id);
+            var entity = await DataContext.SubDepartments.FindAsync(id);
             if (entity == null) throw new NotFoundException();
 
             entity.Deleted = true;

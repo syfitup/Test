@@ -24,6 +24,7 @@ using System.Linq;
 using System.Reflection;
 using WebApplication1.Filters;
 using WebApplication1.Providers;
+using Microsoft.OpenApi.Models;
 
 namespace WebApplication1
 {
@@ -43,14 +44,10 @@ namespace WebApplication1
 
             services.AddControllersWithViews();
 
-            // Inject an implementation of ISwaggerProvider with defaulted settings applied
-            services.AddSwaggerGen(options =>
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
             {
-                options.SwaggerDoc("v1", new Info { Title = "PIPware API", Version = "v1" });
-                options.OperationFilter<SwaggerOperationNameFilter>();
-
-                options.DescribeAllEnumsAsStrings();
-                options.UseReferencedDefinitionsForEnums();
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
             });
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -110,6 +107,16 @@ namespace WebApplication1
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
 
             app.UseEndpoints(endpoints =>

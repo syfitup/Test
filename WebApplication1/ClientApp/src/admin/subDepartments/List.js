@@ -14,40 +14,48 @@ class SubDepartmentList extends Component {
         this.props.getSubDepartments();
     }
 
+    onDeleteClick(id) {
+        this.props.deleteSubDepartment(id);
+    }
+
     render() {
         return (
             <div>
                 <h1>Sub Departments Information</h1>
-                {renderSubDepartmentsTable(this.props)}
+                {this.renderSubDepartmentsTable(this.props)}
                 <Link to="/subdepartment" className="btn btn-primary">Sign up</Link>
             </div>
         );
     }
-}
 
-function renderSubDepartmentsTable(props) {
-    return (
-        <table className='table table-striped'>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Department</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                {props.subdepartments.map(subdepartment =>
-                    <tr key={subdepartment.id}>
-                        <td>{subdepartment.name}</td>
-                        <td>{subdepartment.departmentName}</td> 
-                        <td>{subdepartment.description}</td> 
+    renderSubDepartmentsTable(props) {
+        return (
+            <table className='table table-striped'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Description</th>
                     </tr>
-                )}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {props.subdepartments.map(subdepartment =>
+                        <tr key={subdepartment.id}>
+                            <td>{subdepartment.name}</td>
+                            <td>{subdepartment.departmentName}</td>
+                            <td>{subdepartment.description}</td>
+                            <td></td>
+                            {<button onClick={() => this.onDeleteClick(subdepartment.id)}>Delete</button>}
+                        </tr>
+                    )}
+                </tbody>
+            </table>
 
-    );
+        );
+    }
 }
+
+
 
 export default connect(
     state => state.adminSubDepartmentActions,
