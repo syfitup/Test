@@ -18,33 +18,34 @@ class DepartmentList extends Component {
         return (
             <div>
                 <h1>Departments Information</h1>
-                {renderForecastsTable(this.props)}
+                {this.renderForecastsTable(this.props)}
+                <Link to="/department" className="btn btn-primary">Edit department</Link>
             </div>
         );
     }
-}
 
-function renderForecastsTable(props) {
-    return (
-        <table className='table table-striped'>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Sub Department (s)</th>
-                </tr>
-            </thead>
-            <tbody>
-                {props.departments.map(department => 
-                    <tr key={department.id}>
-                        <td>{department.name}</td>
-                        <td>{department.description}</td>
-                        <td>{department.departmentName}</td>
+    renderForecastsTable(props) {
+        return (
+            <table className='table table-striped'>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Sub Department (s)</th>
                     </tr>
-                )}
-            </tbody>
-        </table>
-    );
+                </thead>
+                <tbody>
+                    {props.departments.map(department =>
+                        <tr key={department.id}>
+                            <td>{department.name}</td>
+                            <td>{department.description}</td>
+                            <td>{department.departmentName}</td>
+                        </tr>
+                    )}
+                </tbody>
+            </table>
+        );
+    }
 }
 
 export default connect(

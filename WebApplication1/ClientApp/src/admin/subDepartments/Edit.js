@@ -29,8 +29,8 @@ class SubDepartmentEdit extends Component {
         }
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.errors) {
+    componentWillReceiveProps(nextProps) {
+        if (nextProps) {
             this.setState({ errors: nextProps.errors });
         }
     }

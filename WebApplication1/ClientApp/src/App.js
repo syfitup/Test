@@ -9,6 +9,8 @@ import UserList from './admin/UserList';
 import DepartmentList from './admin/departments/List';
 import SubDepartmentList from './admin/subDepartments/List';
 import EditSubDepartmentList from './admin/subDepartments/Edit';
+import EditDepartment from './admin/departments/Edit';
+
 
 export default () => (
     <Layout>
@@ -21,5 +23,6 @@ export default () => (
         <Route path='/department-list' component={DepartmentList} />
         <Route path='/subdepartment-list' component={SubDepartmentList} />
         <Route path='/subdepartment' component={EditSubDepartmentList} />
+        <Route path='/department' component={EditDepartment} />
     </Layout>
 );

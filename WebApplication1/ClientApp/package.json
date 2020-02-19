@@ -15,11 +15,12 @@
     "reactstrap": "^6.3.0",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "typescript": "^3.7.5"
   },
   "devDependencies": {
     "ajv": "^6.0.0",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "10.0.3",
     "cross-env": "^5.2.0",
     "eslint": "^4.1.1",
     "eslint-config-react-app": "^2.1.0",

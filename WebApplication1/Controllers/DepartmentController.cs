@@ -9,7 +9,7 @@ using SYF.Infrastructure.Services;
 
 namespace SYF.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/departments")]
     public class DepartmentController : Controller
     {
         public DepartmentController(IDepartmentService departmentService)
@@ -25,7 +25,7 @@ namespace SYF.Web.Controllers
             return DepartmentService.GetByIdAsync(id);
         }
 
-        [HttpGet("[action]")]
+        [HttpGet()]
         public Task<IEnumerable<DepartmentModel>> SearchAsync([FromQuery]DepartmentSearchRequest request)
         {
             return DepartmentService.SearchAsync(request);
