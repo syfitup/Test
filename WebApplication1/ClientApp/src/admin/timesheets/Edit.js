@@ -2,7 +2,7 @@
 import { DepartmentClient } from '../../services/data/departmentClient';
 import TextFieldGroup from '../../common/TextFieldGroup';
 
-function EditDepartment(props) {
+function TimesheetEdit(props) {
 
     const department = {
         name: '',
@@ -89,4 +89,4 @@ function EditDepartment(props) {
     );
 };
 
-export default EditDepartment;
+export default TimesheetEdit;

@@ -25,9 +25,8 @@ class SubDepartmentList extends Component {
     render() {
         return (
             <div>
-                <h1>Sub Departments Information</h1>
+                <h1>Sub Departments</h1>
                 {this.renderSubDepartmentsTable(this.props)}
-                <Link to="/subdepartment" className="btn btn-primary">Sign up</Link>
             </div>
         );
     }
@@ -45,13 +44,10 @@ class SubDepartmentList extends Component {
                 <tbody>
                     {props.subdepartments.map(subdepartment =>
                         <tr key={subdepartment.id}>
-                            {<button onClick={() => this.onEditClick(subdepartment.id)}>Edit</button>}
-                            <Link to={{ pathname: "/subdepartment", subdepartment: { id: subdepartment.id, newRecord: "" } }}> Press Me</Link>
                             <td>{subdepartment.name}</td>
                             <td>{subdepartment.departmentName}</td>
                             <td>{subdepartment.description}</td>
-                            <td></td>
-                            {<button onClick={() => this.onDeleteClick(subdepartment.id)}>Delete</button>}
+                            <Link to={{ pathname: "/subdepartment", subdepartment: { id: subdepartment.id, newRecord: "" } }}>Edit</Link>
                         </tr>
                     )}
                 </tbody>

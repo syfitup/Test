@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { actionCreators } from '../../actions/adminDepartmentActions';
 
-class DepartmentList extends Component {
+class TimesheetList extends Component {
     componentDidMount() {
         // This method is called when the component is first added to the document
         this.ensureDataFetched();
@@ -17,7 +17,7 @@ class DepartmentList extends Component {
     render() {
         return (
             <div>
-                <h1>Departments</h1>
+                <h1>Employee Timesheets</h1>
                 {this.renderTable(this.props)}
             </div>
         );
@@ -52,4 +52,4 @@ class DepartmentList extends Component {
 export default connect(
     state => state.adminDepartmentActions,
     dispatch => bindActionCreators(actionCreators, dispatch)
-)(DepartmentList);
+)(TimesheetList);

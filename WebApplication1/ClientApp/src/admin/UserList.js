@@ -17,16 +17,15 @@ class UserList extends Component {
     render() {
         return (
             <div>
-                <h1>Weather forecast</h1>
-                <p>This component demonstrates fetching data from the server and working with URL parameters.</p>
-                {renderForecastsTable(this.props)}
-                {renderPagination(this.props)}
+                <h1>Employees</h1>
+                {renderTable(this.props)}
+                <Link to={{ pathname: "/register"}}> Add Employee </Link>
             </div>
         );
     }
 }
 
-function renderForecastsTable(props) {
+function renderTable(props) {
     return (
         <table className='table table-striped'>
             <thead>
@@ -55,17 +54,6 @@ function renderForecastsTable(props) {
             </tbody>
         </table>
     );
-}
-
-function renderPagination(props) {
-    const prevStartDateIndex = (props.startDateIndex || 0) - 5;
-    const nextStartDateIndex = (props.startDateIndex || 0) + 5;
-
-    return <p className='clearfix text-center'>
-        <Link className='btn btn-default pull-left' to={`/fetch-data/${prevStartDateIndex}`}>Previous</Link>
-        <Link className='btn btn-default pull-right' to={`/fetch-data/${nextStartDateIndex}`}>Next</Link>
-        {props.isLoading ? <span>Loading...</span> : []}
-    </p>;
 }
 
 export default connect(
