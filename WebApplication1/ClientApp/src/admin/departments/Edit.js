@@ -2,7 +2,7 @@
 import { DepartmentClient } from '../../services/data/departmentClient';
 import TextFieldGroup from '../../common/TextFieldGroup';
 
-function EditDepartment() {
+function EditDepartment(props) {
 
     const department = {
         name: '',
@@ -15,9 +15,9 @@ function EditDepartment() {
     const departmentClient = new DepartmentClient();
 
     useEffect(() => {
-        departmentClient.getById("7FE7C550-8FB4-E711-B0AE-28F10E00516D").then(response => {
-            setModel(response.data);
-        });
+        if (props.location) {
+            fetch(props.location.id);
+        }
     }, test);
 
     const onChange = e => {
@@ -26,8 +26,28 @@ function EditDepartment() {
         setModel(updateModel);
     };
 
+    function fetch(id){
+        departmentClient.getById(id).then(response => {
+            setModel(response.data);
+        });
+    };
+
+    function save() {
+        if (props.location.id) {
+            departmentClient.update(props.location.id, model).then(response => {
+                var test = response;
+            });
+        }
+        else {
+            departmentClient.create(model).then(response => {
+                var test = response;
+            });
+        }
+    };
+
     const onSubmit = e =>  {
         e.preventDefault();
+        save();
     };
 
     return (

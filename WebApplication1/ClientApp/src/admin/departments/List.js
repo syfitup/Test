@@ -37,6 +37,7 @@ class DepartmentList extends Component {
                 <tbody>
                     {props.departments.map(department =>
                         <tr key={department.id}>
+                            <Link to={{ pathname: "/department", id: department.id }}> Press Me</Link>
                             <td>{department.name}</td>
                             <td>{department.description}</td>
                             <td>{department.departmentName}</td>
