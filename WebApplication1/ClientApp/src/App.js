@@ -11,7 +11,7 @@ import SubDepartmentList from './admin/subDepartments/List';
 import EditSubDepartmentList from './admin/subDepartments/Edit';
 import EditDepartment from './admin/departments/Edit';
 import TimesheetEdit from './admin/timesheets/Edit';
-import TimesheetList from './admin/timesheets/List';
+import Timesheets from './admin/timesheets/List';
 
 
 export default () => (
@@ -26,7 +26,7 @@ export default () => (
         <Route path='/subdepartment-list' component={SubDepartmentList} />
         <Route path='/subdepartment' component={EditSubDepartmentList} />
         <Route path='/department' component={EditDepartment} />
-        <Route path='/timesheets-list' component={TimesheetList} />
+        <Route path='/timesheets-list' component={Timesheets} />
         <Route path='/timesheets-edit' component={TimesheetEdit} />
     </Layout>
 );

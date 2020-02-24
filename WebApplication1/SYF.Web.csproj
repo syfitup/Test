@@ -40,6 +40,7 @@
     <None Remove="ClientApp\src\index.js" />
     <None Remove="ClientApp\src\services\data\departmentClient.js" />
     <None Remove="ClientApp\src\services\data\models.ts" />
+    <None Remove="ClientApp\src\services\data\timesheetsClient.js" />
     <None Remove="ClientApp\src\store\configureStore.js" />
     <None Remove="ClientApp\src\store\Counter.js" />
     <None Remove="ClientApp\src\store\WeatherForecasts.js" />
@@ -61,6 +62,7 @@
     <TypeScriptCompile Include="ClientApp\src\components\Layout.js" />
     <TypeScriptCompile Include="ClientApp\src\components\NavMenu.js" />
     <TypeScriptCompile Include="ClientApp\src\index.js" />
+    <TypeScriptCompile Include="ClientApp\src\services\data\timesheetsClient.js" />
     <TypeScriptCompile Include="ClientApp\src\services\data\departmentClient.js" />
     <TypeScriptCompile Include="ClientApp\src\store\configureStore.js" />
     <TypeScriptCompile Include="ClientApp\src\store\Counter.js" />

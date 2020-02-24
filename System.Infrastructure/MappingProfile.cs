@@ -52,6 +52,10 @@ namespace SYF.Infrastructure
             CreateMap<SubDepartment, SubDepartmentModel>();
             CreateMap<SubDepartmentModel, SubDepartment>();
 
+            CreateMap<TimesheetSearchRequest, TimesheetCriteria>();
+            CreateMap<Timesheet, TimesheetModel>();
+            CreateMap<TimesheetModel, Timesheet>();
+
 
         }
     }

@@ -21,6 +21,7 @@ namespace SYF.Data
         public DbSet<PersonRole> PersonRoles { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<SubDepartment> SubDepartments { get; set; }
+        public DbSet<Timesheet> Timesheets { get; set; }
 
 
 

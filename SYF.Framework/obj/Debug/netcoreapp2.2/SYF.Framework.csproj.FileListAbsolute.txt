@@ -9,8 +9,8 @@ C:\Users\SiphoKhumalo\source\repos\WebApplication1\SYF.Framework\obj\Debug\netco
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\bin\Debug\netcoreapp2.2\SYF.Framework.deps.json
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\bin\Debug\netcoreapp2.2\SYF.Framework.dll
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\bin\Debug\netcoreapp2.2\SYF.Framework.pdb
+C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.csprojAssemblyReference.cache
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.AssemblyInfoInputs.cache
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.AssemblyInfo.cs
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.dll
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.pdb
-C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.csprojAssemblyReference.cache

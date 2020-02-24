@@ -25,6 +25,7 @@ using System.Reflection;
 using WebApplication1.Filters;
 using WebApplication1.Providers;
 using Microsoft.OpenApi.Models;
+using SYF.Services.Services;
 
 namespace WebApplication1
 {
@@ -56,6 +57,7 @@ namespace WebApplication1
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IDepartmentService, DepartmentService>();
             services.AddTransient<ISubDepartmentService, SubDepartmentService>();
+            services.AddTransient<ITimesheetService, TimesheetService>();
             services.AddTransient<ISecurityProvider, SecurityProvider>();
             services.AddTransient<IClaimsPrincipalProvider, ClaimsPrincipalProvider>();
 
