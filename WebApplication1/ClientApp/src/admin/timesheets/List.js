@@ -1,6 +1,8 @@
 ﻿import React, { useState, useEffect } from 'react';
+import ReactDataGrid from "react-data-grid";
 import { TimesheetsClient } from '../../services/data/timesheetsClient';
 import TextFieldGroup from '../../common/TextFieldGroup';
+import "./list.css";
 
 function Timesheets() {
 
@@ -10,6 +12,18 @@ function Timesheets() {
         periods: 7
     };
 
+    const columns = [
+        { key: "id", name: "ID", editable: true },
+        { key: "title", name: "Title", editable: true },
+        { key: "complete", name: "Complete", editable: true }
+    ];
+
+    const rows = [
+        { id: 0, title: "Task 1", complete: 20 },
+        { id: 1, title: "Task 2", complete: 40 },
+        { id: 2, title: "Task 3", complete: 60 }
+    ];
+
     const test = "";
     const [model, setModel] = useState(criteria);
     const timesheetsClient = new TimesheetsClient();
@@ -17,6 +31,16 @@ function Timesheets() {
     useEffect(() => {
             fetch();
     }, test);
+
+    const onGridRowsUpdated = ({ fromRow, toRow, updated }) => {
+        this.setState(state => {
+            const rows = state.rows.slice();
+            for (let i = fromRow; i <= toRow; i++) {
+                rows[i] = { ...rows[i], ...updated };
+            }
+            return { rows };
+        });
+    };
 
     const onChange = e => {
         const updateModel = { ...model };
@@ -42,40 +66,16 @@ function Timesheets() {
     };
 
     return (
-        <div className="register">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-8 m-auto">
-                        <h1 className="display-4 text-center">Department</h1>
-                        <p className="lead text-center">
-                            Edit Department
-                            </p>
-                        <form noValidate onSubmit={onSubmit}>
-                            <TextFieldGroup
-                                placeholder="Name"
-                                name="name"
-                                value={model.name}
-                                onChange={onChange}
-                            />
-                            <TextFieldGroup
-                                placeholder="Code"
-                                name="code"
-                                value={model.code}
-                                onChange={onChange}
-                            />
-                            <TextFieldGroup
-                                placeholder="Description"
-                                name="description"
-                                value={model.description}
-                                onChange={onChange}
-                                info="The name to use when logging in!"
-                            />
-
-                            <input type="submit" className="btn btn-info btn-block mt-4" />
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div className="App">
+            <ReactDataGrid
+                columns={columns}
+                rowGetter={i => rows[i]}
+                rowsCount={3}
+                enableCellSelect={true}
+                onGridRowsUpdated={onGridRowsUpdated}
+                minHeight={650}
+                minWidth={650}
+            />
         </div>
     );
 };
