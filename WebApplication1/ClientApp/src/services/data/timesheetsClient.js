@@ -5,7 +5,7 @@ export class TimesheetsClient {
         return axios.get("/api/timesheets", { params: criteria });
     }
 
-    save(id, model): any {
-        return axios.put("/api/timesheets", model);
+    save(model): any {
+        return axios.post("/api/timesheets", model);
     }
 }

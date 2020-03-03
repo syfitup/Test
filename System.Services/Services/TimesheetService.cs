@@ -72,7 +72,7 @@ namespace SYF.Services.Services
 
                     var model = new TimesheetModel
                     {
-                        PersonId = request.PersonId,
+                        PersonId = employee.Id,
                         TimesheetDate = timesheetDate
                     };
 

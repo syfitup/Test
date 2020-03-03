@@ -13,15 +13,15 @@ function Timesheets() {
     };
 
     let columns = [
-        { key: "id", name: "ID", editable: true },
-        { key: "title", name: "Title", editable: true },
-        { key: "complete", name: "Complete", editable: true }
+        { key: "personId", name: "ID", editable: true },
+        { key: "timesheetDate", name: "Title", editable: true },
+        { key: "timesheetEmployeeHours", name: "Complete", editable: true }
     ];
 
     let rows = [
-        { id: 0, title: "Task 1", complete: 20 },
-        { id: 1, title: "Task 2", complete: 40 },
-        { id: 2, title: "Task 3", complete: 60 }
+        { personId: 0, timesheetDate: "Task 1", timesheetEmployeeHours: 20 },
+        { personId: 1, timesheetDate: "Task 2", timesheetEmployeeHours: 40 },
+        { personId: 2, timesheetDate: "Task 3", timesheetEmployeeHours: 60 }
     ];
 
     const test = "";
@@ -40,6 +40,7 @@ function Timesheets() {
         }
 
         setModel(updatedRows);
+        save();
 
         return updatedRows;
 
@@ -85,7 +86,15 @@ function Timesheets() {
     };
 
     function save() {
-        timesheetsClient.save(rowss).then(response => {
+
+        var testSave = [{
+            Id: "92855359-4d90-4909-8fcc-196c000ce9d0",
+            personId: "92855359-4d90-4909-8fcc-196c000ce9d0",
+            timesheetDate: new Date("2020-03-02"),
+            timesheetEmployeeHours: 0
+        }];
+
+        timesheetsClient.save(testSave).then(response => {
                 var test = response;
             });
     };
