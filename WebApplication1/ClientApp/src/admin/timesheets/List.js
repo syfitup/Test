@@ -87,6 +87,18 @@ function Timesheets() {
 
     function save() {
 
+        for (var i = 1; i < columnss.length; i++) {
+            var columnKey = columnss[i].key;
+
+            var columnData = columnKey;
+
+            for (var k = 1; k < rowss.length; k++) {
+                var rowKey = !!rowss[k][i] ? rowss[k][i]: null;
+
+                var rowData = rowKey;
+            }
+        }
+
         var testSave = [{
             Id: "92855359-4d90-4909-8fcc-196c000ce9d0",
             personId: "92855359-4d90-4909-8fcc-196c000ce9d0",
