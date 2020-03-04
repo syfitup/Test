@@ -9,6 +9,7 @@ namespace SYF.Infrastructure.Entities
     public class Timesheet : Entity<Guid>
     {
         public Guid? PersonId { get; set; }
+        public string PersonName { get; set; }
         public DateTime TimesheetDate { get; set; }
         public decimal? TimesheetEmployeeHours { get; set; }
        

@@ -92,6 +92,8 @@ namespace SYF.Services.Services
 
         public async Task SaveAsync(IEnumerable<TimesheetModel> entries)
         {
+            var employees = await DataContext.People.Where(x => !x.Deleted).ToListAsync();
+
             try
             {
                 foreach (var entry in entries)
@@ -107,13 +109,15 @@ namespace SYF.Services.Services
                     {
                         timesheet = await DataContext.Timesheets.FirstOrDefaultAsync(x => x.Id == entry.Id);
                     }
+                    var employee = employees.FirstOrDefault(x => x.Name.Trim() == entry.PersonName.Trim());
 
-                    // Try find the target using business unit and department
+                    // Try find the target using person id and person name
                     if (timesheet == null)
                     {
                         var criteria = new TimesheetCriteria
                         {
-                            PersonId = entry.PersonId,
+                            PersonId = employee.Id,
+                            PersonName = employee.Name,
                             TimesheetDate = entry.TimesheetDate,
                             Deleted = false
                         };
@@ -127,7 +131,8 @@ namespace SYF.Services.Services
                         timesheet = new Timesheet
                         {
                             Id = SequentialGuid.NewGuid(),
-                            PersonId = entry.PersonId,
+                            PersonId = employee.Id,
+                            PersonName = employee.Name,
                             TimesheetDate = entry.TimesheetDate
                         };
 

@@ -12,7 +12,7 @@ export const actionCreators = {
 
         dispatch({ type: GET_USERS });
 
-        const url = `/api/user/Search`;
+        const url = `/api/users`;
         const response = await fetch(url);
         const users = await response.json();
 

@@ -10,6 +10,7 @@ namespace SYF.Infrastructure.Criteria
     public class TimesheetCriteria : BaseCriteria<Timesheet>
     {
         public Guid? PersonId { get; set; }
+        public string PersonName { get; set; }
         public DateTime TimesheetDate { get; set; }
         public DateTime? FromDate { get; set; }
         public DateTime? ToDate { get; set; }
@@ -19,6 +20,9 @@ namespace SYF.Infrastructure.Criteria
         {
             if (PersonId != null)
                 qry = qry.Where(a => a.PersonId == PersonId);
+
+            if (!string.IsNullOrEmpty(PersonName))
+                qry = qry.Where(a => a.PersonName.Trim() == PersonName.Trim());
 
             if (TimesheetDate != null)
                 qry = qry.Where(a => a.TimesheetDate == TimesheetDate);

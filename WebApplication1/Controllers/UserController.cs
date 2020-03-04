@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SYF.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/users")]
     public class UserController : Controller
     {
         public UserController(IUserService userService)
@@ -26,7 +26,7 @@ namespace SYF.Web.Controllers
             return UserService.GetByIdAsync(id);
         }
 
-        [HttpGet("[action]")]
+        [HttpGet()]
         public Task<List<UserSummary>> SearchAsync([FromQuery]UserSearchRequest request)
         {
             return UserService.SearchAsync(request);

@@ -8,6 +8,7 @@ namespace SYF.Infrastructure.Models
     {
         public Guid Id { get; set; }
         public Guid? PersonId { get; set; }
+        public string PersonName { get; set; }
         public DateTime TimesheetDate { get; set; }
         public decimal? TimesheetEmployeeHours { get; set; }
     }

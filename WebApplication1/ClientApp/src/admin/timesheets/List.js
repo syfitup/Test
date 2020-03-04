@@ -1,6 +1,7 @@
 ﻿import React, { useState, useEffect, setState } from 'react';
 import ReactDataGrid from "react-data-grid";
 import { TimesheetsClient } from '../../services/data/timesheetsClient';
+import { UsersClient } from '../../services/data/userClient';
 import TextFieldGroup from '../../common/TextFieldGroup';
 import "./list.css";
 
@@ -19,13 +20,14 @@ function Timesheets() {
     ];
 
     let rows = [
-        { personId: 0, timesheetDate: "Task 1", timesheetEmployeeHours: 20 },
-        { personId: 1, timesheetDate: "Task 2", timesheetEmployeeHours: 40 },
-        { personId: 2, timesheetDate: "Task 3", timesheetEmployeeHours: 60 }
+        { personId: "Admin", timesheetDate: "Date Time", timesheetEmployeeHours: 20 },
+        { personId: "Admin", timesheetDate: "Date Time", timesheetEmployeeHours: 40 },
+        { personId: "Admin", timesheetDate: "Date Time", timesheetEmployeeHours: 60 }
     ];
 
     const test = "";
     const timesheetsClient = new TimesheetsClient();
+    const usersClient = new UsersClient();
     const [rowss, setModel] = useState(rows);
     const [columnss, setColmuns] = useState(columns);
 
@@ -53,6 +55,18 @@ function Timesheets() {
     };
 
     function fetch() {
+
+        usersClient.search().then(response => {
+            //Match the exact number of rows of rows otherwise the grid will not load property.
+            let rows = [];
+
+            for (var i = 0; i < response.data.length; i++) {
+                rows.push({ 0: response.data[i].name });
+            }
+
+            setModel(rows);
+        });
+
         timesheetsClient.search().then(response => {
          
             let colData = [{ key: "0", name: "" }];
@@ -70,44 +84,27 @@ function Timesheets() {
                 }
             }
 
-            //Match the exact number of rows of rows otherwise the grid will not load property.
-
-            let rows = [
-                { 0: "Sipho"},
-                { 0: "Khumalo"},
-                { 0: "Weakness"}
-            ];
-
-            setColmuns(colData);
-          
-
-            setModel(rows);
+            setColmuns(colData);        
         });
     };
 
     function save() {
-
+        var testSave = [];
         for (var i = 1; i < columnss.length; i++) {
-            var columnKey = columnss[i].key;
 
-            var columnData = columnKey;
+            for (var k = 0; k < rowss.length; k++) {
+                var timsheetDate = columnss[i].name;
+                var timeEntry = !!rowss[k][i] ? parseFloat(rowss[k][i]) : null;
 
-            for (var k = 1; k < rowss.length; k++) {
-                var rowKey = !!rowss[k][i] ? rowss[k][i]: null;
-
-                var rowData = rowKey;
+                testSave.push({
+                    personName: rowss[k][0],
+                    timesheetDate: new Date(timsheetDate),
+                    timesheetEmployeeHours: timeEntry
+                });
             }
         }
 
-        var testSave = [{
-            Id: "92855359-4d90-4909-8fcc-196c000ce9d0",
-            personId: "92855359-4d90-4909-8fcc-196c000ce9d0",
-            timesheetDate: new Date("2020-03-02"),
-            timesheetEmployeeHours: 0
-        }];
-
         timesheetsClient.save(testSave).then(response => {
-                var test = response;
             });
     };
 
