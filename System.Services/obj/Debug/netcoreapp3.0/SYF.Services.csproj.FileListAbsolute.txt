@@ -28,3 +28,18 @@ C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.csproj.CopyComplete
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.dll
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.pdb
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Services.deps.json
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Services.dll
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Services.pdb
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Data.dll
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Framework.dll
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Infrastructure.dll
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Data.pdb
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Infrastructure.pdb
+C:\Work\Test\System.Services\bin\Debug\netcoreapp3.0\SYF.Framework.pdb
+C:\Work\Test\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.csprojAssemblyReference.cache
+C:\Work\Test\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.AssemblyInfoInputs.cache
+C:\Work\Test\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.AssemblyInfo.cs
+C:\Work\Test\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.csproj.CopyComplete
+C:\Work\Test\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.dll
+C:\Work\Test\System.Services\obj\Debug\netcoreapp3.0\SYF.Services.pdb

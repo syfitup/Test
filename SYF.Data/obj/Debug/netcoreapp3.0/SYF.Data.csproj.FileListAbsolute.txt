@@ -24,3 +24,16 @@ C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.csproj.CopyComplete
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.dll
 C:\Users\SiphoKhumalo\Documents\Visual Studio 2019\source\repos\WebApplication1\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.pdb
+C:\Work\Test\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.deps.json
+C:\Work\Test\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.dll
+C:\Work\Test\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Data.pdb
+C:\Work\Test\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Framework.dll
+C:\Work\Test\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Infrastructure.dll
+C:\Work\Test\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Infrastructure.pdb
+C:\Work\Test\SYF.Data\bin\Debug\netcoreapp3.0\SYF.Framework.pdb
+C:\Work\Test\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.csprojAssemblyReference.cache
+C:\Work\Test\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.AssemblyInfoInputs.cache
+C:\Work\Test\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.AssemblyInfo.cs
+C:\Work\Test\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.csproj.CopyComplete
+C:\Work\Test\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.dll
+C:\Work\Test\SYF.Data\obj\Debug\netcoreapp3.0\SYF.Data.pdb

@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Services\\SYF.Services.csproj": {}
+    "C:\\Work\\Test\\System.Services\\SYF.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj": {
+    "C:\\Work\\Test\\SYF.Data\\SYF.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj",
+        "projectUniqueName": "C:\\Work\\Test\\SYF.Data\\SYF.Data.csproj",
         "projectName": "SYF.Data",
-        "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj",
+        "projectPath": "C:\\Work\\Test\\SYF.Data\\SYF.Data.csproj",
         "packagesPath": "C:\\Users\\SiphoKhumalo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\obj\\",
+        "outputPath": "C:\\Work\\Test\\SYF.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\SiphoKhumalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -27,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj"
+              "C:\\Work\\Test\\System.Infrastructure\\SYF.Infrastructure.csproj": {
+                "projectPath": "C:\\Work\\Test\\System.Infrastructure\\SYF.Infrastructure.csproj"
               }
             }
           }
@@ -80,19 +83,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj": {
+    "C:\\Work\\Test\\SYF.Framework\\SYF.Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj",
+        "projectUniqueName": "C:\\Work\\Test\\SYF.Framework\\SYF.Framework.csproj",
         "projectName": "SYF.Framework",
-        "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj",
+        "projectPath": "C:\\Work\\Test\\SYF.Framework\\SYF.Framework.csproj",
         "packagesPath": "C:\\Users\\SiphoKhumalo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\obj\\",
+        "outputPath": "C:\\Work\\Test\\SYF.Framework\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\SiphoKhumalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -135,19 +141,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj": {
+    "C:\\Work\\Test\\System.Infrastructure\\SYF.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Work\\Test\\System.Infrastructure\\SYF.Infrastructure.csproj",
         "projectName": "SYF.Infrastructure",
-        "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj",
+        "projectPath": "C:\\Work\\Test\\System.Infrastructure\\SYF.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\SiphoKhumalo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\obj\\",
+        "outputPath": "C:\\Work\\Test\\System.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\SiphoKhumalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -162,8 +171,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj": {
-                "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Framework\\SYF.Framework.csproj"
+              "C:\\Work\\Test\\SYF.Framework\\SYF.Framework.csproj": {
+                "projectPath": "C:\\Work\\Test\\SYF.Framework\\SYF.Framework.csproj"
               }
             }
           }
@@ -235,19 +244,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Services\\SYF.Services.csproj": {
+    "C:\\Work\\Test\\System.Services\\SYF.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Services\\SYF.Services.csproj",
+        "projectUniqueName": "C:\\Work\\Test\\System.Services\\SYF.Services.csproj",
         "projectName": "SYF.Services",
-        "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Services\\SYF.Services.csproj",
+        "projectPath": "C:\\Work\\Test\\System.Services\\SYF.Services.csproj",
         "packagesPath": "C:\\Users\\SiphoKhumalo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Services\\obj\\",
+        "outputPath": "C:\\Work\\Test\\System.Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\SiphoKhumalo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -262,11 +274,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj": {
-                "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\SYF.Data\\SYF.Data.csproj"
+              "C:\\Work\\Test\\SYF.Data\\SYF.Data.csproj": {
+                "projectPath": "C:\\Work\\Test\\SYF.Data\\SYF.Data.csproj"
               },
-              "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\SiphoKhumalo\\Documents\\Visual Studio 2019\\source\\repos\\WebApplication1\\System.Infrastructure\\SYF.Infrastructure.csproj"
+              "C:\\Work\\Test\\System.Infrastructure\\SYF.Infrastructure.csproj": {
+                "projectPath": "C:\\Work\\Test\\System.Infrastructure\\SYF.Infrastructure.csproj"
               }
             }
           }
@@ -330,7 +342,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
