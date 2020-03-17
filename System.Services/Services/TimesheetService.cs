@@ -62,9 +62,9 @@ namespace SYF.Services.Services
             var entries = await timesheetQry.ToListAsync();
 
             var results = new List<TimesheetModel>();
-            foreach (var employee in employees)
+            foreach (var timesheetDate in periodList)
             {
-                foreach (var timesheetDate in periodList)
+                foreach (var employee in employees)
                 {
                     var timesheetValues = entries.Where(a => a.TimesheetDate == timesheetDate &&
                                                           a.PersonId == employee.Id)

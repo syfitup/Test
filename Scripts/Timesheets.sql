@@ -11,7 +11,7 @@ GO
 CREATE TABLE [dbo].[Timesheets](
 	[Id] [uniqueidentifier] NOT NULL,
 	[PersonId] [uniqueidentifier] NULL,
-	[PersonName] [uniqueidentifier] NULL,
+	[PersonName] [varchar](50) NULL,
 	[TimesheetDate] [datetime] NOT NULL,
 	[TimesheetEmployeeHours] [decimal](18, 6) NULL,
 	[Deleted] [bit] NOT NULL,
