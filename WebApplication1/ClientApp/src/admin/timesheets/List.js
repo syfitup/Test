@@ -13,17 +13,8 @@ function Timesheets() {
         periods: 7
     };
 
-    let columns = [
-        { key: "personId", name: "ID", editable: true },
-        { key: "timesheetDate", name: "Title", editable: true },
-        { key: "timesheetEmployeeHours", name: "Complete", editable: true }
-    ];
-
-    let rows = [
-        { personId: "Admin", timesheetDate: "Date Time", timesheetEmployeeHours: 20 },
-        { personId: "Admin", timesheetDate: "Date Time", timesheetEmployeeHours: 40 },
-        { personId: "Admin", timesheetDate: "Date Time", timesheetEmployeeHours: 60 }
-    ];
+    let columns = [];
+    let rows = [];
 
     const test = "";
     const timesheetsClient = new TimesheetsClient();
@@ -78,10 +69,6 @@ function Timesheets() {
                     name: response.data[i].timesheetDate,
                     editable: true
                 });
-
-                if (i > 3) {
-                    break;
-                }
             }
 
             setColmuns(colData);        
@@ -118,7 +105,7 @@ function Timesheets() {
             <ReactDataGrid
                 columns={columnss}
                 rowGetter={i => rowss[i]}
-                rowsCount={3}
+                rowsCount={rowss.length}
                 enableCellSelect={true}
                 onGridRowsUpdated={onGridRowsUpdated}
             />

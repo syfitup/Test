@@ -52,6 +52,8 @@ export const actionCreators = {
                 "mobileNumber": newUser.mobileNumber,
                 "departmentId": newUser.departmentId,
                 "subDepartmentId": newUser.subDepartmentId,
+                 "personId": "",
+
             })
         };
 

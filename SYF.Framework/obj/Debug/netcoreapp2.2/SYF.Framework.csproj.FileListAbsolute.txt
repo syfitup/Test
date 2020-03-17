@@ -21,3 +21,4 @@ C:\Work\Test\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.AssemblyInfoInp
 C:\Work\Test\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.AssemblyInfo.cs
 C:\Work\Test\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.dll
 C:\Work\Test\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.pdb
+C:\Work\Test\SYF.Framework\obj\Debug\netcoreapp2.2\SYF.Framework.csprojAssemblyReference.cache
